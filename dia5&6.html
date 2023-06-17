@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>dia 5 e 6</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul {
+            width: fit-content;
+            margin: 1%;
+            padding-right: 2%;
+
+            border: 1px solid black;
+            border-radius: 0.5rem;
+        }
+
+        li {
+            width: fit-content;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //dia 6
+        lisRemoval = () => {
+            const lis = document.querySelectorAll('li');
+            lis.forEach((list) => {
+                list.onclick = () => {
+                    console.log(list);
+                    list.remove();
+                }
+            });
+        }
+
+        //dia 5
+        adicionar = () => {
+            const adicionarPerg = prompt("Você deseja adicionar uma comida na sua lista de compras", "sim/não");
+
+            if (adicionarPerg === null || adicionarPerg.toUpperCase() === "NAO") {
+                return;
+            }
+
+            if (adicionarPerg.toUpperCase() === "SIM") {
+                const qualPerg = prompt("Qual comida deseja adicionar?");
+                const categPerg = prompt("Qual categoria ela se encaixa?");
+                const categPergTrue = categPerg.toUpperCase();
+
+                let targetUl = document.querySelector(`ul[data-category="${categPergTrue}"]`);
+
+                if (targetUl) {
+                    const li = document.createElement('li');
+                    li.textContent = qualPerg;
+                    targetUl.appendChild(li);
+
+                    } else {
+                    const ul = document.createElement('ul');
+                    ul.setAttribute('data-category', categPergTrue);
+                    ul.innerHTML = categPergTrue;
+                    const li = document.createElement('li');
+                    li.textContent = qualPerg;
+                    ul.appendChild(li);
+                    document.body.appendChild(ul);
+                }
+            setTimeout(adicionar, 0);
+            } else {
+                alert("Insira uma resposta válida.");
+                adicionar();
+            }
+            lisRemoval();
+        }
+        adicionar();
+
+    </script>
+</body>
+</html>

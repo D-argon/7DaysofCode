@@ -1,0 +1,292 @@
+:root {
+    --bg-color: black;
+    --color-1: #22d2fd;
+    --color-2: #f6f6f6;
+    --color-3: #272727;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 400 1rem 'Verdana', Sans-serif;
+    background-color: var(--bg-color);
+    color: var(--color-2);
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+}
+
+.box__title {
+    padding-top: 2%;
+    box-sizing: border-box;
+
+    font-size: 2rem;
+
+    color: var(--color-2);
+}
+
+.box__bttn {
+    width: 10%;
+    padding: 0.5% 1% 0.5% 1%;
+
+    background-color: var(--color-1);
+
+    border: 0;
+    border-radius: 0.5rem;
+    
+    font-size: 1rem;
+
+    transition: transform 0.2s ease;
+}
+
+.box__bttn:hover {
+    transform: scale(1.2);
+
+    background-color: var(--color-3);
+    color: var(--color-1);
+
+    border: 1px solid var(--color-1);
+
+    font-weight: 600;
+}
+
+.box__bttn:active {
+    transform: scale(1.0);
+    transition: transform 0.2s ease;
+}
+
+.box__areas {
+    height: 80%;
+    width: 100%;
+    
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.area {
+    height: 100%;
+    width: 45%;
+    
+
+    border: 0.125rem solid var(--color-1);
+    border-radius: 0.75rem;
+}
+
+.area__title {
+    height: 10%;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    color: var(--color-2);
+    background-color: var(--color-3);
+
+    font-size: 1.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area__ls {
+    height: 90%;
+    padding: 10%;
+    box-sizing: border-box;
+
+    color: var(--color-1);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+li:hover {
+    color: rgb(218, 35, 35);
+    cursor: pointer;
+}
+
+.ui-dialog {
+    border: 0.1rem solid var(--color-1);
+    border-radius: 0.5rem;
+}
+
+.ui-dialog-titlebar-close {
+    display: none;
+}
+
+.ui-dialog-titlebar {
+    font-weight: 600;
+
+    padding: 2%;
+
+    background-color: var(--color-3);
+
+    border: 0.125rem solid var(--color-3);
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.ui-dialog-content {
+   height: 100%;
+   width: 100%;
+
+   background-color: var(--bg-color);
+   border-radius: 0 0 0.5rem 0.5rem;
+
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+}
+
+.dialg__bttn {
+    height: 50%;
+    width: 50%;
+    padding: 0.5% 1% 0.5% 1%;
+
+    background-color: var(--color-1);
+
+    border: 0;
+    border-radius: 0.5rem;
+    
+    font-size: 1rem;
+
+    transition: transform 0.2s ease;
+}
+
+.dialg__bttn:hover {
+    transform: scale(1.2);
+
+    background-color: var(--color-3);
+    color: var(--color-1);
+
+    border: 1px solid var(--color-1);
+
+    font-weight: 600;
+}
+
+.dialg__bttn:active {
+    transform: scale(1.0);
+    transition: transform 0.2s ease;
+}
+
+.ativa .areas {
+    height: 100%;
+    background-color: lightsalmon;
+    color: var(--color-2);
+}
+
+.box__hidden {
+    height: 40%;
+    width: 30%;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 20%;
+
+    border: 0.125rem solid var(--color-1);
+    border-radius: 0.5rem;
+}
+
+.choose__tab {
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--bg-color);
+
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose__tab.hide {
+    display: none;
+}
+
+.choose__tab__title {
+    height: 20%;
+    width: 100%;
+    padding: 10%;
+    box-sizing: border-box;
+
+    background-color: var(--color-3);
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.choose__tab__bttnWrapper {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.choose__tab__bttn {
+    height: 35%;
+    width: 30%;
+
+    padding: 0.5% 1% 0.5% 1%;
+
+    background-color: var(--color-1);
+
+    border: 0;
+    border-radius: 0.5rem;
+    
+    font-size: 1rem;
+
+    transition: transform 0.2s ease;
+}
+
+.choose__tab__bttn:hover {
+    transform: scale(1.2);
+
+    background-color: var(--color-3);
+    color: var(--color-2);
+
+    border: 1px solid var(--color-1);
+
+    font-weight: 600;
+}
+
+.choose__tab__bttn:active {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}

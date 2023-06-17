@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>dia 7</title>
+</head>
+<body>
+    <script>
+
+        const soma = () => {
+            const valores = Number(prompt('Quantos valores deseja somar?'));
+
+            let totalValor = 0;
+
+            for (let i = 0; i < valores; i++) {
+                const valorI = Number(prompt(`Insira o ${i + 1}º valor:`));
+                totalValor += valorI;
+            }
+
+            return totalValor;
+        }
+
+        const subtracao = () => {
+            const valores = Number(prompt('Quantos valores deseja subtrair?'));
+
+            let totalValor = 0;
+
+            for (let i = 0; i < valores; i++) {
+                const valorI = Number(prompt(`Insira o ${i + 1}º valor:`));
+                totalValor -= valorI;
+            }
+
+            return totalValor;
+        }
+
+        const multiplicacao = () => {
+            const valores = Number(prompt('Quantos valores deseja multiplicar?'));
+
+            let totalValor = 1;
+
+            for (let i = 0; i < valores; i++) {
+                const valorI = Number(prompt(`Insira o ${i + 1}º valor:`));
+                totalValor *= valorI;
+            }
+
+            return totalValor;
+        }
+
+        const divisao = () => {
+            const valores = Number(prompt('Quantos valores deseja dividir?'));
+            const valor1 = Number(prompt(`Insira o 1º valor:`));
+
+            let totalValor = valor1;
+
+            for (let i = 1; i < valores; i++) {
+                const valorI = Number(prompt(`Insira o ${i + 1}º valor:`));
+                totalValor /= valorI;
+            }
+
+            const precisao = Number(prompt('Qual precisão de casas decimais?'))
+
+            return totalValor.toFixed(precisao);
+        }
+        
+        const calculadora = () => {
+            const perg1 = prompt('Escolha uma opção: soma, subtração, multiplicação, divisão, ou sair.', 'soma/subtração/multiplicação/divisão/sair.');
+            const perg1True = perg1.toUpperCase().trim().replace(/ç/g, 'c').replace(/ã/g, 'a');
+
+            switch (perg1True) {
+                case 'SOMA':
+                    alert(soma());
+                    calculadora();
+                    break;
+                case 'SUBTRACAO':
+                    alert(subtracao());
+                    calculadora();
+                    break;
+                case 'MULTIPLICACAO':
+                    alert(multiplicacao());
+                    calculadora();
+                    break;
+                case 'DIVISAO':
+                    alert(divisao());
+                    calculadora();
+                    break;
+                case 'SAIR':
+                    alert("Até a próxima");
+                    break;
+                default:
+                    alert('Insira uma função válida.');
+                    calculadora();
+            }
+        }
+
+        calculadora();
+    </script>
+</body>
+</html>

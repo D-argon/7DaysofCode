@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dia 2</title>
+  </head>
+  <body>
+    <script>
+      function quest1() {
+        let name = prompt("Qual o seu nome?");
+
+        if (/^[a-zA-Z\s]+$/.test(name) && name.trim() !== "") {
+          return name;
+        } else {
+          alert("Por favor insira caracteres válidos.");
+          return quest1();
+        }
+      }
+
+      function quest2() {
+        let age = prompt("Quantos anos você tem?");
+
+        if (/^[a-zA-Z0-9\s]+$/.test(age.trim()) && age.trim() !== "") {
+          return age;
+        } else {
+          alert("Por favor insira caracteres válidos.");
+          return quest2();
+        }
+      }
+
+      function quest3() {
+        let prog = prompt("Qual linguagem de programação você está estudando?");
+
+        if (/^[a-zA-Z\s]+$/.test(prog) && prog.trim() !== "") {
+          return prog;
+        } else {
+          alert("Por favor insira caracteres válidos.");
+          return quest3();
+        }
+      }
+
+      const NAME = quest1();
+      const AGE = quest2();
+      const PROG = quest3();
+
+      alert(`Olá ${NAME}, você tem ${AGE} anos e já está aprendendo ${PROG}!`);
+
+      function quest4() {
+        let question = prompt(`Você gosta de estudar ${PROG}?`);
+
+        if (question.toUpperCase() === "SIM") {
+          alert("Muito bom! Continue estudando e você terá muito sucesso.");
+        } else if (
+          question.toUpperCase() === "NÃO" ||
+          question.toUpperCase() === "NAO"
+        ) {
+          alert("Ahh que pena... Já tentou aprender outras linguagens?");
+        } else {
+          alert('Por favor responda com "Sim" ou "Não".');
+          return quest4();
+        }
+      }
+
+      quest4();
+    </script>
+  </body>
+</html>
