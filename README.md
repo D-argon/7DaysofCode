@@ -123,7 +123,7 @@ Resolution:
 
 ![Resolution 6](https://github.com/D-argon/7DaysofCode/assets/130792776/4745c3e5-bf3c-49f8-9065-d01f5b2b8ddb)
 
-<details>
+</details>
 
 
 ## Day 7
@@ -132,7 +132,6 @@ Resolution:
 Notes: 
 * Fairly easy too, make a calculator and separate each function in functions, 
 the proposal was only two inputs but I knew how to make more by for's means so yeah.
-
 
 Resolution:
 
